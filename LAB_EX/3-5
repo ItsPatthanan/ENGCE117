@@ -13,7 +13,6 @@ int main()
     printf("-----------------\n");
      for(i = 0; i < arr_num; i++){
         k = 1;
-        //printf("%d \n", k);
         for (j = i+1; j <= arr_num; j++){
             
            if( arr[i] == arr[j] ){
