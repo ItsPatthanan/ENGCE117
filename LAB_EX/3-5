@@ -6,19 +6,18 @@ int main()
     printf("Input number of element to be store in array : ");
     scanf("%d", &arr_num);
     printf("-----------------\n");
-    for (i = 0; i < arr_num; i++){
+    for ( i = 0 ; i < arr_num ; i++){
         printf("Arr Element [%d]: ", i + 1);
         scanf("%d", &arr[i]);
     }
     printf("-----------------\n");
-     for(i = 0; i < arr_num; i++){
+     for( i = 0 ; i < arr_num ; i++){
         k = 1;
-        for (j = i+1; j <= arr_num; j++){
+        for ( j = i + 1 ; j <= arr_num ; j++){
             
-           if( arr[i] == arr[j] ){
+           if( arr[i] == arr[j]){
                 k++;
                 arr[j] = 0;
-                
             }
         }
         if (arr[i] != 0){
