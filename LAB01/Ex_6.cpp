@@ -18,7 +18,6 @@ int *GetArr2D(int *row, int *col);
 int main() {
   int r, c, *arr;
   arr = GetArr2D(&r, &c);
-  printf("[%d] [%d]", *GetArr2D(&r, &c));
   delete[] arr;
   return 0;
 }
