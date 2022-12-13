@@ -1,5 +1,5 @@
-fname = "Patthanan Jaichuai"
-print(fname)
-print("Len of fname = ",len(fname))
-S = fname.split()
-print(S)
+Myname = "Patthanan Jaichuai"
+print(Myname)
+print("Len of Myname = ",len(Myname))
+print("Spliit Myname ",Myname.split())
+
