@@ -9,7 +9,7 @@
 <body>
 <?php
    $MyName = "Patthanan";
-   echo "$name go to Maya";
+   echo "$MyName go to Maya";
    echo "<br/>";
    echo strlen($MyName);
 ?>
