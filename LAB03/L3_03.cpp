@@ -1,30 +1,37 @@
 #include <stdio.h>
 #include <string.h>
-
-struct ItMe
-{
+struct collector {
     char name[20];
-    int age;
-    char sex;
-    int salary;
+    int watch;
 };
 
-void show(struct ItMe status);
+struct collector findwatch(struct collector people[], int count);
 
-int main(){
-    struct ItMe _m;
-    strcpy(_m.name,"Patthanan");
-    _m.age = 25;
-    _m.sex = 'M';
-    _m.salary = 75000;
-    show(_m);
-    return 0 ;
-}
-void show(struct ItMe status){
- printf("Name: %s \n",status.name);
-    printf("Age: %d \n",status.age);
-    printf("Sex: %c \n",status.sex);
-    printf("Salary: %d\n",status.salary);
+int main() {
+    struct collector people[4];
+    strcpy (people[0].name, "nut");
+    people[0].watch = 8;
+    for( int i = 1 ; i < 4 ; i++ ){
+        printf("Collector %d : name, watch : ", i);
+        scanf("%s %d", people[i].name, 
+                        &people[i].watch);
+    }
+
+    struct collector mostwatch;
+    mostwatch = findwatch( people, 4 );
+    printf("largest collection of watches : %s %d", mostwatch.name, mostwatch.watch);
+    return 0;
 }
 
-   
+struct collector findwatch(struct collector people[], int count) {
+    int maxwatch, max_I;
+    maxwatch = people[0].watch;
+    max_I = 0;
+    for ( int i = 1 ; i < count ; i++ ){
+        if ( people[i].watch > maxwatch ){
+            maxwatch = people[i].watch;
+            max_I = i;
+        }
+    }
+    return people[max_I];
+}
