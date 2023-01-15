@@ -9,26 +9,19 @@ struct studentNode {
   struct studentNode *next;
 };
 
-struct studentNode *AddNode(struct studentNode **startNode, char n[], int a,
-                            char s, float g); // prototype
-void InsNode(struct studentNode *preNode, char n[], int a, char s,
-             float g);                     // prototype
+struct studentNode *AddNode(struct studentNode **startNode, char n[], int a, char s, float g); // prototype
+void InsNode(struct studentNode *preNode, char n[], int a, char s, float g); // prototype
 void DelNode(struct studentNode *preNode); // prototype
-void ShowAll(struct studentNode *walk);    // prototype
+void ShowAll(struct studentNode *walk); // prototype
 
 int main() {
   struct studentNode *start, *now;
   start = NULL;
-  now = AddNode(&start, "one", 6, 'M', 3.11);
-  ShowAll(start);
-  now = AddNode(&start, "two", 8, 'F', 3.22);
-  ShowAll(start);
-  InsNode(now, "three", 10, 'M', 3.33);
-  ShowAll(start);
-  InsNode(now, "four", 12, 'F', 3.44);
-  ShowAll(start);
-  DelNode(now);
-  ShowAll(start);
+  now = AddNode(&start, "one", 6, 'M', 3.11);ShowAll(start);
+  now = AddNode(&start, "two", 8, 'F', 3.22);ShowAll(start);
+  InsNode(now, "three", 10, 'M', 3.33);ShowAll(start);
+  InsNode(now, "four", 12, 'F', 3.44);ShowAll(start);
+  DelNode(now);ShowAll(start);
   return 0;
 } // end function
 
