@@ -10,8 +10,7 @@ struct studentNode {
   struct studentNode *next;
 };
 
-void InsNode(struct studentNode **preNode, char n[], int a, char s,
-             float g);                      // prototype
+void InsNode(struct studentNode **preNode, char n[], int a, char s,float g); // prototype
 void GoNext(struct studentNode ***ptr);     // prototype
 void DelNode(struct studentNode **preNode); // prototype
 void ShowAll(struct studentNode **walk);    // prototype
