@@ -1,10 +1,12 @@
 //นายพัทธนันท์ ใจช่วย 65543206026-8 SEC 2
+//https://youtu.be/snMgVckx7l8
+
 #include <stdio.h>
 #include <string.h>
 
 struct KBcustom{
     char KBname[20];
-    int KBqty;
+    int KBqty = 0;
     struct KBcustom *next;
 };
 
@@ -58,7 +60,7 @@ void showback(struct KBcustom **walk){
     
     while (currKBnode != NULL){
         nextKBnode = currKBnode->next;
-        currKBnode->next = preKBnode;
+        currKBnode->next = preKBnode;//เปลี่ยนหัวลูกศร
         preKBnode = currKBnode;
         currKBnode = nextKBnode;
     }
@@ -92,4 +94,5 @@ void swapnode(struct KBcustom **walk, char KB1[], char KB2[]){
     struct KBcustom *temp = currKB2->next;
     currKB2->next = currKB1->next;
     currKB1->next = temp;
+    
 }
